@@ -1,8 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://src/Ui/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Fonts/Roboto-Bold.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Assets/Themes/menu_theme.tres" type="Theme" id=3]
+[ext_resource path="res://Assets/Sprites/PlayerWarWarWall (1).png" type="Texture" id=4]
+[ext_resource path="res://Assets/Sprites/Wall.png" type="Texture" id=5]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.109804, 0.00784314, 0.00784314, 1 )
@@ -11,7 +13,7 @@ bg_color = Color( 0.109804, 0.00784314, 0.00784314, 1 )
 size = 70
 font_data = ExtResource( 2 )
 
-[node name="Panel" type="Panel"]
+[node name="MainMenu" type="Panel"]
 margin_left = -1.0
 margin_right = 1024.0
 margin_bottom = 605.0
@@ -44,11 +46,16 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Wall" type="Sprite" parent="."]
+position = Vector2( 782.137, 98.1168 )
+scale = Vector2( 4.82776, 4.60478 )
+texture = ExtResource( 5 )
+
 [node name="Label" type="Label" parent="."]
-margin_left = 521.0
-margin_top = 140.0
-margin_right = 855.0
-margin_bottom = 189.0
+margin_left = 507.546
+margin_top = 55.9104
+margin_right = 841.546
+margin_bottom = 138.91
 custom_fonts/font = SubResource( 2 )
 text = "War War "
 __meta__ = {
@@ -56,14 +63,68 @@ __meta__ = {
 }
 
 [node name="Label2" type="Label" parent="."]
-margin_left = 669.671
-margin_top = 213.075
-margin_right = 1003.67
-margin_bottom = 296.075
+margin_left = 656.217
+margin_top = 128.985
+margin_right = 990.216
+margin_bottom = 211.985
 custom_fonts/font = SubResource( 2 )
 text = "Wall"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="PlayerWarWarWall (1)" type="Sprite" parent="Node2D"]
+position = Vector2( 559.904, 409.513 )
+rotation = -0.315458
+scale = Vector2( 7.90083, 6.62434 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 15.2739, 4.19716, 17.2551, 22.6303 )
+
+[node name="PlayerWarWarWall (1)2" type="Sprite" parent="Node2D"]
+position = Vector2( 623.137, 467.675 )
+rotation = -0.353982
+scale = Vector2( 8.71703, 8.56409 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 23.2112, 34.1968, 9.97025, 6.93582 )
+
+[node name="Node2D2" type="Node2D" parent="."]
+position = Vector2( 214.057, -77.2984 )
+rotation = 0.00256739
+
+[node name="PlayerWarWarWall (1)" type="Sprite" parent="Node2D2"]
+position = Vector2( 681.948, 331.024 )
+rotation = 2.52788
+scale = Vector2( 7.90083, 6.62434 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 15.2739, 4.19716, 17.2551, 22.6303 )
+
+[node name="PlayerWarWarWall (1)2" type="Sprite" parent="Node2D2"]
+position = Vector2( 610.35, 287.004 )
+rotation = 2.48936
+scale = Vector2( 8.71703, 8.56409 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 23.2112, 34.1968, 9.97025, 6.93582 )
+
+[node name="PlayerWarWarWall (1)" type="Sprite" parent="."]
+position = Vector2( 709.1, 422.094 )
+rotation = -0.551654
+scale = Vector2( 10.9887, 7.49267 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 33.1814, 36.3642, 6.93582, 3.25117 )
+
+[node name="PlayerWarWarWall (1)2" type="Sprite" parent="."]
+position = Vector2( 719.588, 270.765 )
+rotation = -0.551654
+scale = Vector2( 10.9887, 7.49267 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 33.1814, 36.3642, 6.93582, 3.25117 )
 [connection signal="pressed" from="btn_new_game" to="." method="_on_btn_new_game_pressed"]
 [connection signal="pressed" from="btn_exit" to="." method="_on_btn_exit_pressed"]

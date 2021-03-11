@@ -9,4 +9,4 @@ func _on_btn_exit_pressed():
 
 
 func _on_btn_new_game_pressed():
-	get_tree().change_scene("res://src/Player/Player.tscn")
+	get_tree().change_scene("res://src/Game.tscn")
