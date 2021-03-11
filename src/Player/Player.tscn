@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://src/Base.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/Sprites/PlayerWarWarWall (1).png" type="Texture" id=2]
+[ext_resource path="res://src/Player/Player.gd" type="Script" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 8.93147, 11.0595 )
+
+[node name="Player" instance=ExtResource( 1 )]
+scale = Vector2( 4.72716, 4.72716 )
+script = ExtResource( 3 )
+speed = 300
+rotationSpeed = 3.0
+
+[node name="Body" parent="." index="0"]
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 17, 5, 15, 21 )
+
+[node name="CollisionShape2D" parent="." index="1"]
+rotation = 1.57079
+shape = SubResource( 1 )
+
+[node name="Lodong" parent="." index="2"]
+position = Vector2( -3.57628e-07, 10.1541 )
+scale = Vector2( 1.55201, -0.848211 )
+texture = ExtResource( 2 )
+offset = Vector2( 2, 0 )
+region_enabled = true
+region_rect = Rect2( 24, 36, 9, 4 )
