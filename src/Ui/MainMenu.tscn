@@ -1,0 +1,69 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://src/Ui/MainMenu.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Fonts/Roboto-Bold.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Assets/Themes/menu_theme.tres" type="Theme" id=3]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.109804, 0.00784314, 0.00784314, 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 70
+font_data = ExtResource( 2 )
+
+[node name="Panel" type="Panel"]
+margin_left = -1.0
+margin_right = 1024.0
+margin_bottom = 605.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 3 )
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_new_game" type="Button" parent="."]
+margin_left = 121.0
+margin_top = 193.0
+margin_right = 366.0
+margin_bottom = 258.0
+text = "New Game"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_exit" type="Button" parent="."]
+margin_left = 121.0
+margin_top = 281.0
+margin_right = 366.0
+margin_bottom = 346.0
+text = "Exit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 521.0
+margin_top = 140.0
+margin_right = 855.0
+margin_bottom = 189.0
+custom_fonts/font = SubResource( 2 )
+text = "War War "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 669.671
+margin_top = 213.075
+margin_right = 1003.67
+margin_bottom = 296.075
+custom_fonts/font = SubResource( 2 )
+text = "Wall"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="btn_new_game" to="." method="_on_btn_new_game_pressed"]
+[connection signal="pressed" from="btn_exit" to="." method="_on_btn_exit_pressed"]
