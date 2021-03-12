@@ -20,4 +20,4 @@ func control_camera():
 	
 	$Lodong.look_at(mouse)
 	
-	$Lodong.rotation = clamp($Lodong.rotation, deg2rad(0), deg2rad(90))
+	$Lodong.rotation = clamp($Lodong.rotation, deg2rad(-45), deg2rad(45))
